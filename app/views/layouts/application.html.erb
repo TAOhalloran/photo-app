@@ -4,7 +4,7 @@
     <meta charset="utf-8">
     <meta http-equiv="X-UA-Compatible" content="IE=Edge,chrome=1">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title><%= content_for?(:title) ? yield(:title) : "PhotoApp" %></title>
+    <title><%= content_for?(:title) ? yield(:title) : "CrownPhotography" %></title>
     <%= csrf_meta_tags %>
 
     <%= stylesheet_link_tag "application", :media => "all" %>
@@ -29,12 +29,12 @@
           <span class="icon-bar"></span>
           <span class="icon-bar"></span>
         </button>
-        <a class="navbar-brand" href="#">PhotoApp</a>
+        <a class="navbar-brand" href="#"> <%= link_to "Crown", root_path, class: "navbar-brand", id: "logo" %> </a>
         <div class="navbar-collapse collapse navbar-responsive-collapse">
           <ul class="nav navbar-nav">
-            <li><%= link_to 'X', "/path1"  %></li>
-            <li><%= link_to "Y", "/path2"  %></li>
-            <li><%= link_to "Z", "/path3"  %></li>
+            <li><%= link_to "New", "/path1"  %></li>
+            <li><%= link_to "Gallery", "/path2"  %></li>
+            <li><%= link_to "Video", "/path3"  %></li>
           </ul>
           <ul class="nav navbar-right col-md-4">
             <% if current_user %>
@@ -64,7 +64,9 @@
       </div><!--/row-->
 
       <footer>
-        <p>&copy;  TAO 2019</p>
+        <br></br>
+        <br></br>
+        <p>&copy;  Crown Photography 2019</p>
       </footer>
 
     </div> <!-- /container -->

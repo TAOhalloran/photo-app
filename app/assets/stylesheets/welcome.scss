@@ -25,12 +25,12 @@
 .nav.navbar-nav {
   .navbar-link {
     border-radius: 5px;
-    color: #fff;
+    color: #000000;
     margin-top: 15px;
     padding: 8px;
   }
   .navbar-link:focus, .navbar-link:hover {
-    background: #3071a9;
+    background: #eaeaea;
     color: #fff;
     
   }
@@ -65,9 +65,9 @@
 
 .jumbotron {
   text-align: center;
-  background-image: asset-url('meeting.png');
+  #background-image: asset-url('assets/clip-0e6f40ddf6713e727c66192cc184ae01060f8861592b13ba88c4dac37147fd56.jpg');
   background-size: cover;
-  color: #fff;
+  color: #eaeaea;
   font-family: 'Helvetica Neue' !important;
   font-stretch: expanded;
   padding-top: 25px;
