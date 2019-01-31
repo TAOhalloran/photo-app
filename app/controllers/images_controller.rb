@@ -1,10 +1,10 @@
 class ImagesController < ApplicationController
   before_action :set_image, only: [:show, :edit, :update, :destroy]
-
+  helper_method :sort_column, :sort_direction
   # GET /images
   # GET /images.json
   def index
-    @images = Image.all
+    @slide = User.images.order(sort_column + " " + sort_direction)
   end
 
   # GET /images/1
@@ -71,5 +71,14 @@ class ImagesController < ApplicationController
     # Never trust parameters from the scary internet, only allow the white list through.
     def image_params
       params.require(:image).permit(:name, :picture, :user_id)
+    end
+     private
+
+    def sort_column
+      User.images.include?(params[:sort]) ? params[:sort] : "name"
+    end
+  
+    def sort_direction
+      %w[asc desc].include?(params[:direction]) ? params[:direction] : "asc"
     end
 end
